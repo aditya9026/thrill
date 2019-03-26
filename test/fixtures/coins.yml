@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  symbol: MyString
+  csymbol: 
+  ctype: MyString
+  string,: MyString
+  rate: 9.99
+
+two:
+  name: MyString
+  symbol: MyString
+  csymbol: 
+  ctype: MyString
+  string,: MyString
+  rate: 9.99

@@ -1,0 +1,20 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  pool: 5
+  username: postgres
+  password: postgres
+  timeout: 5000
+
+development:
+  <<: *default
+  database: thrill_development
+
+test:
+  <<: *default
+  database: thrill_test
+
+production:
+  <<: *default
+  database: thrill_production
