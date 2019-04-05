@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class HelloWorldController < ApplicationController
-  layout "hello_world"
+class MasterController < ApplicationController
+  layout "master"
   def index
     @rails_props = { rails: 'from rails' }
   end

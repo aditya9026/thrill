@@ -1,9 +1,9 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import helloWorldReducer from '../reducers/helloWorldReducer';
+import clientReducer from '../reducers/clientReducer';
 
 const configureStore = (railsProps) => (
-  createStore(helloWorldReducer, railsProps, applyMiddleware(thunk))
+  createStore(clientReducer, railsProps, applyMiddleware(thunk))
 );
 
 export default configureStore;

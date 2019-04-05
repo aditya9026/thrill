@@ -1,6 +1,6 @@
 import React from 'react';
 
-class HelloWorld extends  React.Component {
+class Client extends  React.Component {
 
   componentWillMount() {
   }
@@ -15,4 +15,4 @@ class HelloWorld extends  React.Component {
   }
 }
 
-export default HelloWorld;
+export default Client;
