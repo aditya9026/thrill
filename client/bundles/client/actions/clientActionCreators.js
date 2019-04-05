@@ -1,8 +1,8 @@
 /* eslint-disable import/prefer-default-export */
 
-import { HELLO_WORLD_NAME_UPDATE } from '../constants/clientConstants';
+import { TEST } from '../constants/clientConstants';
 
 export const updateName = (text) => ({
-  type: HELLO_WORLD_NAME_UPDATE,
+  type: TEST,
   text,
 });

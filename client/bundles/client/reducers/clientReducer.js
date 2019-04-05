@@ -1,15 +1,15 @@
 import { combineReducers } from 'redux';
-import { HELLO_WORLD_NAME_UPDATE } from '../constants/clientConstants';
+import { TEST } from '../constants/clientConstants';
 
-const rails = (state = '', action) => {
+const rails_props = (state = '', action) => {
   switch (action.type) {
-    case HELLO_WORLD_NAME_UPDATE:
+    case TEST:
       return action.text;
     default:
       return state;
   }
 };
 
-const clientReducer = combineReducers({ rails });
+const clientReducer = combineReducers({ rails_props });
 
 export default clientReducer;
