@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get '/', to: 'master#index'
+  root to: 'master#index'
+  devise_for :users
   get '*path', to: 'master#index'
 end
