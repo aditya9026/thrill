@@ -1,11 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import SignInForm from '../../components/Forms/SignInForm';
-
+import { userLogin } from '../../actions/clientActionCreaters';
 class SignIn extends  React.Component {
-  
+  constructor(props){
+    super(props)
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
   handleSubmit(values){
-    console.log(values)
+    this.props.userLogin(values)
   }
 
   render () {
@@ -19,8 +23,13 @@ class SignIn extends  React.Component {
   
 function mapStateToProps(store) {
   return {
-    test: store.rails_props
+    currentUser: store.currentUser
+  }
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    userLogin: (params) => dispatch(userLogin(params)),
   }
 }
 
-export default connect(mapStateToProps)(SignIn);
+export default connect(mapStateToProps, mapDispatchToProps)(SignIn);

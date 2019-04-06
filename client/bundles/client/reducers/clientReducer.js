@@ -1,16 +1,30 @@
 import { combineReducers } from 'redux';
 import { reducer as form } from 'redux-form'
-import { TEST } from '../constants/clientConstants';
+import { USER_LOGIN } from '../constants/clientConstants';
 
-const rails_props = (state = '', action) => {
+const initialState = {
+  loading: false
+}
+const currentUser = (currentUser) => {
+  return { currentUser: currentUser }
+}
+
+const authReducer = (state = initialState, action) => {
   switch (action.type) {
-    case TEST:
-      return action.text;
+    case USER_LOGIN:
+      return {
+        ...state,
+        loading: true
+      }
     default:
       return state;
   }
 };
 
-const clientReducer = combineReducers({ rails_props, form });
+const clientReducer = combineReducers({ 
+  authReducer,
+  form,
+  currentUser,
+});
 
 export default clientReducer;

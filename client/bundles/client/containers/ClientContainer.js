@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Client from '../components/client';
-import * as actions from '../actions/clientActionCreators';
+import * as actions from '../actions/clientActionCreaters';
 import { Link } from 'react-router-dom'
 
 class ClientContainer extends  React.Component {
@@ -15,7 +15,6 @@ class ClientContainer extends  React.Component {
   }
 }
   
-// Which part of the Redux global state does our component want to receive as props?
 const mapStateToProps = (state) => ({ props: state });
 
 export default connect(mapStateToProps, actions)(ClientContainer);

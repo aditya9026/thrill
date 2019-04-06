@@ -3,6 +3,6 @@
 class MasterController < ApplicationController
   layout "master"
   def index
-    @rails_props = { rails_props: 'hello' }
+    @rails_props = { currentUser: current_user }
   end
 end

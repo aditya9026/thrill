@@ -18,6 +18,12 @@ class SignInForm extends React.Component {
 								type="email"
 								placeholder="Email"
 							/>
+							<Field
+								name="password"
+								component={InputField}
+								type="password"
+								placeholder="Password"
+							/>
 						</div>
 					</div>
 					<div>

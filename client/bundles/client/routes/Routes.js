@@ -10,6 +10,7 @@ class Routes extends React.Component {
         <div>
           <Route path="/" exact component={ClientContainer} />
           <Route path="/user/sign_in" component={SignIn} />
+          <Route path="/users/confirmation/new" component={SignIn} />
         </div>
       </Router>
     )
