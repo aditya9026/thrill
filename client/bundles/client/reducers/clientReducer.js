@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import { reducer as form } from 'redux-form'
 import { TEST } from '../constants/clientConstants';
 
 const rails_props = (state = '', action) => {
@@ -10,6 +11,6 @@ const rails_props = (state = '', action) => {
   }
 };
 
-const clientReducer = combineReducers({ rails_props });
+const clientReducer = combineReducers({ rails_props, form });
 
 export default clientReducer;
