@@ -15,6 +15,7 @@ class SignIn extends  React.Component {
   render () {
 		return (
       <div>
+        <h1>SignIn</h1>
         <SignInForm {...this.props} onSubmit={this.handleSubmit}/>
       </div>
     )

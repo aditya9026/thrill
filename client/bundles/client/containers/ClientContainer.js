@@ -8,7 +8,8 @@ class ClientContainer extends  React.Component {
   render () {
     return (
       <div>
-        <Link to="/user/sign_in">SignIn</Link>
+        <Link to="/users/sign_in">SignIn</Link>
+        <Link to="/users/sign_up">SignUp</Link>
         <Client/>
       </div>
     )
