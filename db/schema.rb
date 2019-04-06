@@ -15,25 +15,6 @@ ActiveRecord::Schema.define(version: 2019_04_06_074101) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "coins", force: :cascade do |t|
-    t.string "name"
-    t.string "symbol"
-    t.string "ctype"
-    t.decimal "rate", precision: 15, scale: 10
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "thrills", force: :cascade do |t|
-    t.string "name"
-    t.string "symbol"
-    t.string "ctype"
-    t.decimal "rate", precision: 4, scale: 2
-    t.string "csymbol"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
