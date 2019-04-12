@@ -3,6 +3,6 @@
 class MasterController < ApplicationController
   layout "master"
   def index
-    @rails_props = { currentUser: current_user }
+    @rails_props = { current_user: current_user&.slice(:email) }
   end
 end

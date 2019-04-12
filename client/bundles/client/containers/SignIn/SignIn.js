@@ -8,6 +8,12 @@ class SignIn extends  React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+  componentWillReceiveProps(nextProps){
+    if (nextProps.error){
+      alert(nextProps.error)
+    } 
+  }
+
   handleSubmit(values){
     this.props.userLogin(values)
   }
@@ -24,7 +30,8 @@ class SignIn extends  React.Component {
   
 function mapStateToProps(store) {
   return {
-    currentUser: store.currentUser
+    currentUser: store.current_user,
+    error: store.authReducer.error
   }
 }
 const mapDispatchToProps = (dispatch) => {

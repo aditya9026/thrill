@@ -4,10 +4,6 @@ import configureStore from '../store/clientStore';
 import { BrowserRouter } from 'react-router-dom';
 import Routes from '../routes/Routes';
 
-
-// See documentation for https://github.com/reactjs/react-redux.
-// This is how you get props from the Rails view into the redux store.
-// This code here binds your smart component to the redux store.
 const ClientApp = (props) => (
   <Provider store={configureStore(props)}>
     <BrowserRouter>

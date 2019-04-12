@@ -9,7 +9,6 @@ class SignUp extends  React.Component {
   }
 
   handleSubmit(values){
-		console.log(values)
     this.props.userSignUp(values)
   }
 
@@ -24,7 +23,7 @@ class SignUp extends  React.Component {
   
 function mapStateToProps(store) {
   return {
-    currentUser: store.currentUser
+    currentUser: store.current_user
   }
 }
 const mapDispatchToProps = (dispatch) => {
