@@ -5,7 +5,7 @@ import InputField from '../Inputs/InputField';
 class SignUpForm extends React.Component {
 
 	render() {
-		const { handleSubmit, pristine, reset, submitting } = this.props
+		const { handleSubmit, pristine, reset, submitting } = this.props;
 		return (
 			<div>
 				<h1>SignUp</h1>

@@ -21,9 +21,10 @@ class SignUp extends  React.Component {
   }
 }
   
-function mapStateToProps(store) {
+function mapStateToProps(state) {
   return {
-    currentUser: store.current_user
+    currentUser: state.authReducer.currentUser || state.currentUser,
+    errors: state.authReducer.errors
   }
 }
 const mapDispatchToProps = (dispatch) => {

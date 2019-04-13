@@ -15,10 +15,13 @@ import {
 const initialState = {
   loading: false,
   currentUser: null,
-  error: null,
+  errors: null,
 }
 
-const current_user = (currentUser) => {
+const currentUser = (currentUser, action) => {
+  if (action.type === 'USER_LOGOUT_SUCCESS'){
+    return null
+  }
   return currentUser ? currentUser : null
 }
 
@@ -33,12 +36,12 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: false,
-        currentUser: action.data.currentUser
+        currentUser: action.data.current_user
       }
     case USER_LOGIN_FAILED:
       return {
         ...state,
-        error: action.data.error
+        errors: action.data.error
       }
       case USER_SIGNUP:
       return {
@@ -53,6 +56,22 @@ const authReducer = (state = initialState, action) => {
     case USER_SIGNUP_FAILED:
       return {
         ...state,
+        errors: action.data.errors
+      }
+    case USER_LOGOUT:
+      return {
+        ...state,
+        loading: true,
+      }
+    case USER_LOGOUT_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        currentUser: null,
+      }
+    case USER_LOGOUT_FAILED:
+      return {
+        ...state,
       }    
     default:
       return state;
@@ -62,7 +81,7 @@ const authReducer = (state = initialState, action) => {
 const clientReducer = combineReducers({ 
   authReducer,
   form,
-  current_user,
+  currentUser,
 });
 
 export default clientReducer;

@@ -33,7 +33,7 @@ class Routes extends React.Component {
 
   render() {
     const { currentUser } = this.props
-    console.log(this.props)
+    // console.log(this.props)
     return (
       <Router>
         <div>
@@ -49,6 +49,6 @@ class Routes extends React.Component {
 
 export default connect(
   state => ({
-    currentUser: state.current_user
+    currentUser: state.authReducer.currentUser || state.currentUser,
   })
 )(Routes)
